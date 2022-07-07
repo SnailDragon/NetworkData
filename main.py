@@ -11,11 +11,13 @@ else:
     timelimit = 9999999999
 
 start = time.time()
+current = time.time()
 
 os.system("speedtest-cli --csv-header > output.txt")
 
-while(time.time() - start < timelimit):
-    
+while(current - start < timelimit):
+    current = time.time()
+    print(f"{current - start} < {timelimit}")
     os.system("speedtest-cli --csv >> output.txt")
 
     time.sleep(downtime)
