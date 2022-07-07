@@ -1,10 +1,11 @@
 import time
 import os
+import sys
 
-downtimeIn = input("Enter time between tests (hh:mm:ss): ")
+downtimeIn = sys.argv[1]
 downtime = int(downtimeIn[0:2]) * 60*60 + int(downtimeIn[3:5]) * 60 + int(downtimeIn[6:8])
 
-timelimitIn = input("Enter duration of test or skip (dd:hh:mm:ss): ")
+timelimitIn = sys.argv[2]
 if(timelimitIn != ""):
     timelimit = int(timelimitIn[0:2]) * 60*60*24 + int(timelimitIn[3:5]) * 60*60 + int(timelimitIn[6:8]) * 60 + int(timelimitIn[9:11])
 else:
