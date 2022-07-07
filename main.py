@@ -1,7 +1,5 @@
 import time
-import speedtest
-
-st = speedtest.Speedtest()
+import os
 
 downtimeIn = input("Enter time between tests (hh:mm:ss): ")
 downtime = int(downtimeIn[0:2]) * 60*60 + int(downtimeIn[3:5]) * 60 + int(downtimeIn[6:8])
@@ -14,21 +12,10 @@ else:
 
 start = time.time()
 
-print(st.results.csv_header())
-print()
+os.system("speedtest-cli --csv-header > output.txt")
 
 while(time.time() - start < timelimit):
     
-    # download = st.download()
-    # upload = st.upload()
-
-    # servernames = []
-    # st.get_servers(servernames)
-    # best = st.get_best_server()
-    # ping = st.results.ping()
-
-    # print(f"{download}, {upload}, ")
-
-    print(st.results.csv())
+    os.system("speedtest-cli --csv >> output.txt")
 
     time.sleep(downtime)
