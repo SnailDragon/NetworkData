@@ -4,11 +4,11 @@ A project to gather network data over a long period of time.
 ## Usage: 
 
 ```
-python3 main.py [_downTime_] [_timeLimit_] 
+python3 main.py [downTime] [timeLimit] 
 ```
 
-Where [_downTime_] is formatted as hhmmss
-and [_timeLimit_] is formatted as ddhhmmss
+Where [downTime] is formatted as hhmmss
+and [timeLimit] is formatted as ddhhmmss
 
 ## Example
 ```
