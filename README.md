@@ -10,10 +10,10 @@ You can use crontab to run checkSpeed at specified intervals.
 ### To setup:
 Run `crontab -e`.
 
-Then append this line to your crontab to run the script every 30 mins:
+Then append this line to your crontab to run the script every 30 mins (using 0,30 runs into an error, I counldn't figure out why):
 
-    0,30 * * * * python [absolute path to checkSpeed.py] [absolute path to output csv file]
+    5,35 * * * * python [absolute path to checkSpeed.py] [absolute path to output csv file]
 
 Or every hour:
 
-    0 * * * * python [absolute path to checkSpeed.py] [absolute path to output csv file]
+    5 * * * * python [absolute path to checkSpeed.py] [absolute path to output csv file]
