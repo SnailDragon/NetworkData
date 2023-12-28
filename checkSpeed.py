@@ -26,4 +26,4 @@ with open(filePath, "a") as f:
             
     f.write(f"{date}, {time}, {server}, {download}, {upload}, {ping}\n")
 
-print("done")
+print("done " + datetime.datetime.now().strftime("%H:%M:%S") + "\n")
