@@ -1,10 +1,16 @@
 import speedtest
 import datetime
 from os.path import exists
+import sys
 
-existed = exists("output.csv")
+filePath = "output.csv"
 
-with open("output.csv", "a") as f:
+if(len(sys.argv) == 2):
+    filePath = sys.argv[1]
+
+existed = exists(filePath)
+
+with open(filePath, "a") as f:
     if(not existed):
         f.write("Date, Time, Server, Download (Mbps), Upload (Mbps), Ping (ms)\n")
 
