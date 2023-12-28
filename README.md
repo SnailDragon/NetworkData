@@ -12,8 +12,8 @@ Run `crontab -e`.
 
 Then append this line to your crontab to run the script every 30 mins:
 
-    */30 * * * * python [**absolute** path to checkSpeed.py] [**absolute** path to output csv file]
+    0,30 * * * * python [**absolute** path to checkSpeed.py] [**absolute** path to output csv file]
 
 Or every hour:
 
-    * */1 * * * python [**absolute** path to checkSpeed.py] [**absolute** path to output csv file]
+    0 * * * * python [**absolute** path to checkSpeed.py] [**absolute** path to output csv file]

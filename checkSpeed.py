@@ -3,6 +3,8 @@ import datetime
 from os.path import exists
 import sys
 
+print("starting... ")
+
 filePath = "output.csv"
 
 if(len(sys.argv) == 2):
