@@ -3,7 +3,7 @@ import datetime
 from os.path import exists
 import sys
 
-print("starting... ")
+print(datetime.datetime.now().strftime("%H:%M:%S") + " starting... ")
 
 filePath = "output.csv"
 
@@ -22,9 +22,13 @@ with open(filePath, "a") as f:
     time = datetime.datetime.now().strftime("%H:%M:%S")
 
     download = st.download() / 1_000_000
+    print("download")
     upload = st.upload() / 1_000_000
+    print("upload")
     ping = st.results.ping
+    print("ping")
     server = "\"" + st.results.server["name"] + "\""
+    print("server")
             
     f.write(f"{date}, {time}, {server}, {download}, {upload}, {ping}\n")
 
